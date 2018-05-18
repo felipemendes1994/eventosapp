@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 import com.eventoapp.eventoapp.models.Evento;
 
 @Repository
-public interface EventoRepository extends CrudRepository<Evento, String>{
+public interface EventoRepository extends CrudRepository<Evento, Integer>{
 
-	Evento findByCodigo(long codigo);
+	Evento findByCodigo(Integer codigo);
 }

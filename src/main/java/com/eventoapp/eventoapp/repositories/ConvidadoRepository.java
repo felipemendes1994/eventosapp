@@ -9,7 +9,7 @@ import com.eventoapp.eventoapp.models.Convidado;
 import com.eventoapp.eventoapp.models.Evento;
 
 @Repository
-public interface ConvidadoRepository extends CrudRepository<Convidado, String>{
+public interface ConvidadoRepository extends CrudRepository<Convidado, Integer>{
 	
 	List<Convidado> findByEvento(Evento evento);
 	

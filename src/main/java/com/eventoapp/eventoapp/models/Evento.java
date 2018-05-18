@@ -17,7 +17,7 @@ public class Evento implements Serializable{
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	private long codigo;
+	private Integer codigo;
 	
 	@NotEmpty
 	private String nome;
@@ -34,10 +34,10 @@ public class Evento implements Serializable{
 	@OneToMany
 	private List<Convidado> convidados;
 	
-	public long getCodigo() {
+	public Integer getCodigo() {
 		return codigo;
 	}
-	public void setCodigo(long codigo) {
+	public void setCodigo(Integer codigo) {
 		this.codigo = codigo;
 	}
 	public String getNome() {

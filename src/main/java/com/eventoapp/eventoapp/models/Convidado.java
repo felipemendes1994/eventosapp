@@ -3,6 +3,8 @@ package com.eventoapp.eventoapp.models;
 import java.io.Serializable;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
@@ -13,6 +15,9 @@ public class Convidado implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
 	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	private Integer codigo;
+	
 	@NotEmpty
 	private String rg;
 	
@@ -23,6 +28,12 @@ public class Convidado implements Serializable{
 	private Evento evento;
 	
 	
+	public Integer getCodigo() {
+		return codigo;
+	}
+	public void setCodigo(Integer codigo) {
+		this.codigo = codigo;
+	}
 	public String getRg() {
 		return rg;
 	}
@@ -41,6 +52,5 @@ public class Convidado implements Serializable{
 	public void setEvento(Evento evento) {
 		this.evento = evento;
 	}
-	
 	
 }
